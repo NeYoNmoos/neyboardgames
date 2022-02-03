@@ -1,23 +1,103 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import * as React from "react";
+import {
+  AppBar,
+  Box,
+  Toolbar,
+  Typography,
+  Button,
+  Card,
+  Grid,
+  TextField
+} from "@mui/material";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Elis stinkt kekw xd
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Box sx={{ flexGrow: 1 }}>
+        <AppBar position="static">
+          <Toolbar>
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+              NeyBoardGames
+            </Typography>
+            <Button color="inherit">Login</Button>
+          </Toolbar>
+        </AppBar>
+      </Box>
+
+      <Grid
+        container
+        spacing={10}
+        padding={10}
+        style={{ minHeight: "0vh" }}
+      >
+        
+        <Grid item xs={12}>
+          <h1>Bestes Game der welt</h1>
+        </Grid>
+
+        <Grid item xs={6} sm={6} md={6} 
+        direction="column"
+        alignItems="center"
+        justify="center"> 
+          
+          <Card>
+            <Grid>
+              <Grid item xs={4}>
+                a
+              </Grid>
+              <Grid item xs={4}>
+                a
+              </Grid>
+              <Grid item xs={4}>
+                a
+              </Grid>
+              <Grid item xs={4}>
+                a
+              </Grid>
+              <Grid item xs={4}>
+                a
+              </Grid>
+              <Grid item xs={4}>
+                a
+              </Grid>
+              <Grid item xs={4}>
+                a
+              </Grid>
+              <Grid item xs={4}>
+                a
+              </Grid>
+              <Grid item xs={4}>
+                a
+              </Grid>
+            </Grid>
+            <h1>Fick Fack Fuck</h1>
+            <h1>Fick Fack Fuck</h1>
+            <h1>Fick Fack Fuck</h1>
+          </Card>
+        </Grid>
+
+        <Grid item xs={6} sm={6} md={6}>
+          <Card>
+            <h1>Chat goes here...</h1>
+
+            <TextField 
+              label="Chat here"
+              multiline
+              maxRows={4}
+            />
+
+            <Button
+              variant="contained"
+            >
+              Send
+            </Button>
+
+          </Card>
+          
+        </Grid>
+
+      </Grid>
     </div>
   );
 }
