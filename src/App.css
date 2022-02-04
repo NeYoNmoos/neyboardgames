@@ -1,0 +1,51 @@
+.field {
+    height: 0;
+    width: 30%;
+    padding-bottom: 30%;
+    background-color: burlywood;
+
+
+    line-height: 100%;
+    text-align: center;
+}
+
+.middleRowVertical {
+    height: 0;
+    width: 30%;
+    padding-bottom: 30%;
+    background-color: burlywood;
+
+    border-left: 3px solid darkgreen;
+    border-right: 3px solid darkgreen;
+
+    line-height: 30%;
+    text-align: center;
+}
+
+.middleRowHorizontal {
+    height: 0;
+    width: 30%;
+    padding-bottom: 30%;
+    background-color: burlywood;
+
+    border-top: 3px solid darkgreen;
+    border-bottom: 3px solid darkgreen;
+
+    line-height: 30%;
+    text-align: center;
+}
+
+.middle {
+    height: 0;
+    width: 30%;
+    padding-bottom: 30%;
+    background-color: burlywood;
+
+    border-left: 3px solid darkgreen;
+    border-right: 3px solid darkgreen;
+    border-top: 3px solid darkgreen;
+    border-bottom: 3px solid darkgreen;
+
+    line-height: 30%;
+    text-align: center;
+}

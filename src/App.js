@@ -42,33 +42,55 @@ function App() {
         justify="center"> 
           
           <Card>
-            <Grid>
-              <Grid item xs={4}>
-                a
+            <Grid 
+            container
+            spacing={2}
+            line-height="100%"
+            >
+              <Grid item xs={4} className="field">
+                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                NeyBoardGames
+                </Typography>
               </Grid>
-              <Grid item xs={4}>
-                a
+              <Grid item xs={4} className="middleRowVertical">
+                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                NeyBoardGames
+                </Typography>
               </Grid>
-              <Grid item xs={4}>
-                a
+              <Grid item xs={4} className="field">
+                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                NeyBoardGames
+                </Typography>
               </Grid>
-              <Grid item xs={4}>
-                a
+              <Grid item xs={4} className="middleRowHorizontal">
+                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                NeyBoardGames
+                </Typography>
               </Grid>
-              <Grid item xs={4}>
-                a
+              <Grid item xs={4} className="middle">
+                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                NeyBoardGames
+                </Typography>
               </Grid>
-              <Grid item xs={4}>
-                a
+              <Grid item xs={4} className="middleRowHorizontal">
+                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                NeyBoardGames
+                </Typography>
               </Grid>
-              <Grid item xs={4}>
-                a
+              <Grid item xs={4} className="field">
+                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                NeyBoardGames
+                </Typography>
               </Grid>
-              <Grid item xs={4}>
-                a
+              <Grid item xs={4} className="middleRowVertical"> 
+                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                NeyBoardGames
+                </Typography>
               </Grid>
-              <Grid item xs={4}>
-                a
+              <Grid item xs={4} className="field">
+                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                NeyBoardGames
+                </Typography>
               </Grid>
             </Grid>
             <h1>Fick Fack Fuck</h1>
@@ -78,7 +100,7 @@ function App() {
         </Grid>
 
         <Grid item xs={6} sm={6} md={6}>
-          <Card>
+          <Card height="100%">
             <h1>Chat goes here...</h1>
 
             <TextField 
