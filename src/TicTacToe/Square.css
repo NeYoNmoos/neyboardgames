@@ -19,6 +19,7 @@
 .field {
     width: 50vw;
     height: 20vw;
+    max-height: 256px;
 
     min-width: 50px;
     min-height: 50px;

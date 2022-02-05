@@ -57,7 +57,7 @@ class Board extends React.Component {
 
         return(
             <>
-                <div>
+                <div className="gameStatus">
                     {status}
                 </div>
                 <Grid container className="boardTiles">
