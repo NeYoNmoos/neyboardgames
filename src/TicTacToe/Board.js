@@ -1,12 +1,9 @@
 import * as React from "react";
 import Square from "./Square";
 import {
-    Typography,
     Grid,
   } from "@mui/material";
 import CalculateWinner from "./CaclulateWinner";
-import { calculateNewValue } from "@testing-library/user-event/dist/utils";
-import calculateWinner from "./CaclulateWinner";
 
 class Board extends React.Component {
     constructor(props) {
@@ -20,7 +17,7 @@ class Board extends React.Component {
     handleClick(i) {
         const squares = this.state.squares.slice();
 
-        if(calculateWinner(squares) || squares[i]) {
+        if(CalculateWinner(squares) || squares[i]) {
             return; 
         }
 
