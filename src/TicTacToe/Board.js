@@ -1,5 +1,6 @@
 import * as React from "react";
 import Square from "./Square";
+import "./Board.css";
 import {
     Grid,
   } from "@mui/material";
@@ -59,7 +60,7 @@ class Board extends React.Component {
                 <div>
                     {status}
                 </div>
-                <Grid container>
+                <Grid container className="boardTiles">
                     {this.renderSquare(0)}
                     {this.renderSquare(1)}
                     {this.renderSquare(2)}

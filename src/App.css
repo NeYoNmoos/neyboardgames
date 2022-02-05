@@ -1,10 +1,11 @@
-.field {
-    height: 0;
-    width: 30%;
-    padding-bottom: 30%;
-    background-color: burlywood;
+.app{
+    height: 100vh;
+    background-color: darkgrey;
+    overflow: hidden;
+}
 
+.game{
+    max-width: 80vh;
 
-    line-height: 100%;
-    text-align: center;
+    
 }

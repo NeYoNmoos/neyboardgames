@@ -1,0 +1,36 @@
+/* .field {
+    height: 0;
+    width: 30%;
+    padding-bottom: 30%;
+    background-color: burlywood;
+    border: 2px solid darkgreen;
+
+    text-align: center;
+    align-items: center;
+    height: 0vh;
+
+} */
+
+.squareValue {
+    
+
+}
+
+.field {
+    width: 50vw;
+    height: 20vw;
+
+    min-width: 50px;
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    cursor: pointer;
+    background-color: burlywood;
+    border: 2px solid darkgreen;
+}
+
+/* .squareValue {
+
+} */

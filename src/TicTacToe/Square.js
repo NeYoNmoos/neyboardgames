@@ -1,17 +1,16 @@
 import * as React from "react";
+import "./Square.css";
 import {
     Grid,
-    Button
+    Typography
   } from "@mui/material";
 
 const Square = (props) => {
     return (
-      <Grid item xs={4} className="field">
-
-            <Button className="SquareButton" onClick={props.onClick}>
-                {props.value}
-            </Button>
-
+      <Grid item xs={4} className="field" onClick={props.onClick}>
+        <Typography className="squareValue" variant="h1" component="div">
+          {props.value}
+        </Typography>
       </Grid>
     );
 }

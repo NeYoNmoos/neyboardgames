@@ -14,7 +14,7 @@ import TicTacToe from "./TicTacToe/TicTacToe";
 
 function App() {
   return (
-    <div>
+    <div className="app">
       <Box sx={{ flexGrow: 1 }}>
         <AppBar position="static">
           <Toolbar>
@@ -28,29 +28,26 @@ function App() {
 
       <Grid
         container
-        spacing={10}
-        padding={10}
+        spacing={2}
+        padding={2}
         style={{ minHeight: "0vh" }}
       >
         
-        <Grid item xs={12}>
-          <h1>Bestes Game der welt</h1>
+        <Grid item xs={12} textAlign="center">
+          <h1>Tic Tac Toe</h1>
         </Grid>
 
-        <Grid item xs={6} sm={6} md={6} 
+        <Grid item xs={8} sm={8} md={8} 
         direction="column"
-        alignItems="center"
-        justify="center"> 
+        > 
           
-          <Card>
+          <Card className="game"> 
             {/* game goes here */}
-
-            <TicTacToe></TicTacToe>
-
+            <TicTacToe />
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={6} md={6}>
+        <Grid item xs={4} sm={4} md={4}>
           <Card height="100%">
             <h1>Chat goes here...</h1>
 
