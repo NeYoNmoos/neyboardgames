@@ -10,6 +10,7 @@ import {
   Grid,
   TextField
 } from "@mui/material";
+import TicTacToe from "./TicTacToe/TicTacToe";
 
 function App() {
   return (
@@ -42,60 +43,10 @@ function App() {
         justify="center"> 
           
           <Card>
-            <Grid 
-            container
-            spacing={2}
-            line-height="100%"
-            >
-              <Grid item xs={4} className="field">
-                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                NeyBoardGames
-                </Typography>
-              </Grid>
-              <Grid item xs={4} className="middleRowVertical">
-                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                NeyBoardGames
-                </Typography>
-              </Grid>
-              <Grid item xs={4} className="field">
-                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                NeyBoardGames
-                </Typography>
-              </Grid>
-              <Grid item xs={4} className="middleRowHorizontal">
-                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                NeyBoardGames
-                </Typography>
-              </Grid>
-              <Grid item xs={4} className="middle">
-                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                NeyBoardGames
-                </Typography>
-              </Grid>
-              <Grid item xs={4} className="middleRowHorizontal">
-                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                NeyBoardGames
-                </Typography>
-              </Grid>
-              <Grid item xs={4} className="field">
-                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                NeyBoardGames
-                </Typography>
-              </Grid>
-              <Grid item xs={4} className="middleRowVertical"> 
-                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                NeyBoardGames
-                </Typography>
-              </Grid>
-              <Grid item xs={4} className="field">
-                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                NeyBoardGames
-                </Typography>
-              </Grid>
-            </Grid>
-            <h1>Fick Fack Fuck</h1>
-            <h1>Fick Fack Fuck</h1>
-            <h1>Fick Fack Fuck</h1>
+            {/* game goes here */}
+
+            <TicTacToe></TicTacToe>
+
           </Card>
         </Grid>
 
@@ -112,13 +63,10 @@ function App() {
             <Button
               variant="contained"
             >
-              Send
+              SEND
             </Button>
-
           </Card>
-          
         </Grid>
-
       </Grid>
     </div>
   );
