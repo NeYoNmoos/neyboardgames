@@ -2,6 +2,7 @@ import * as React from "react";
 import Square from "./Square";
 import "./Board.css";
 import {
+    Button,
     Grid,
   } from "@mui/material";
 import CalculateWinner from "./CaclulateWinner";
@@ -35,6 +36,14 @@ class Board extends React.Component {
         });
     }
 
+    resetGame() {
+        this.setState({
+            squares: Array(9).fill(null),
+            xIsNext: true,
+        });
+
+        console.log("game reset" + this.squares); 
+    }
 
     renderSquare(i) {
         return (
@@ -71,6 +80,11 @@ class Board extends React.Component {
                     {this.renderSquare(7)}
                     {this.renderSquare(8)}
                 </Grid>
+                <div className="resetSpace">
+                    <Button className="resetButton" variant="contained" onClick={() => {this.resetGame();}}> 
+                        RESET GAME
+                    </Button>
+                </div>
             </>
         ); 
 

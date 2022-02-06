@@ -17,12 +17,15 @@
 }
 
 .field {
-    width: 50vw;
-    height: 20vw;
-    max-height: 256px;
+    border: 1px solid white;
+    min-width: 100px;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    cursor: pointer;
 
-    min-width: 50px;
-    min-height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
