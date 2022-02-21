@@ -11,8 +11,41 @@ import {
   TextField
 } from "@mui/material";
 import TicTacToe from "./TicTacToe/TicTacToe";
+import io, { Socket } from "socket.io-client"; 
+import {nanoid} from "nanoid";
+import { useState, useEffect } from "react";
+
+const socket = io.connect("http://localhost:5000/");
+const userName = nanoid(4); 
 
 function App() {
+
+  const [gameId, setGameId] = useState('');
+  
+
+  const createGame = (game) => {
+    console.log("game created");
+  }
+
+  const joinGame = (e) => {
+    e.preventDefault();
+    console.log(gameId);
+  }
+  const [message, setMessage] = useState('');
+  const [chat, setChat] = useState([]);
+
+  const sendChat = (e) => {
+    e.preventDefault();
+    socket.emit("chat", {message, userName});
+    setMessage("");
+  }
+
+  useEffect(() => {
+    socket.on("chat", (payload) => {
+      setChat([...chat, payload]);
+    });
+  });
+
   return (
     <div className="app">
       <Box sx={{ flexGrow: 1 }}>
@@ -37,7 +70,24 @@ function App() {
           <h1>Tic Tac Toe</h1>
         </Grid>
 
-        <Grid item xs={8} sm={8} md={8} 
+        <Grid item xs={6}>
+          <form onSubmit={joinGame}>
+            <TextField type="text"
+            placeholder="input game id" 
+            value={gameId} 
+            onChange={(e) => { 
+              setGameId(e.target.value);
+            }}
+            /> 
+            <Button variant="contained" type="submit">JOIN</Button>
+          </form>
+        </Grid>
+
+        <Grid item xs={6}>
+            <Button variant="contained" onClick={createGame}>CREATE</Button>
+        </Grid>
+
+        <Grid item xs={12} sm={8} md={8} 
         direction="column"
         > 
           
@@ -51,17 +101,23 @@ function App() {
           <Card height="100%">
             <h1>Chat goes here...</h1>
 
-            <TextField 
-              label="Chat here"
-              multiline
-              maxRows={4}
-            />
+            {chat.map((payload, index) => {
+              return(
+              <p key={index}> <span>id: {payload.userName}</span>: {payload.message} </p>
+              )
+            })}
 
-            <Button
-              variant="contained"
-            >
-              SEND
-            </Button>
+            <form onSubmit={sendChat}>
+              <TextField 
+              type="text"
+              placeholder="Chat here" 
+              value={message} 
+              onChange={(e) => { 
+                setMessage(e.target.value);
+              }}
+              /> 
+              <Button variant="contained" type="submit">JOIN</Button>
+             </form>
           </Card>
         </Grid>
       </Grid>
