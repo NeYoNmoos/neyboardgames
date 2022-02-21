@@ -11,7 +11,7 @@ import {
   TextField
 } from "@mui/material";
 import TicTacToe from "./TicTacToe/TicTacToe";
-import io, { Socket } from "socket.io-client"; 
+import io from "socket.io-client"; 
 import {nanoid} from "nanoid";
 import { useState, useEffect } from "react";
 
