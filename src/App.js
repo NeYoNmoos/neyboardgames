@@ -15,7 +15,7 @@ import io from "socket.io-client";
 import {nanoid} from "nanoid";
 import { useState, useEffect } from "react";
 
-const socket = io.connect("https://neyboardgames-server.herokuapp.com:80/");
+const socket = io.connect("https://neyboardgames-server.herokuapp.com:443/");
 const userName = nanoid(4); 
 
 function App() {
